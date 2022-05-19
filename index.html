@@ -1,19 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="js-file.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Arana Agustin, simulador</title>
 </head>
 
 <body>
-    <h1>
-      THE TITLE OF YOUR WEBPAGE
-    </h1>
-    <div id="container"></div>
-  </body>
+
+    <nav class="navbar navbar-dark bg-dark text-white">
+        <div class="container-fluid">
+            <h1>Simulador DnD</h1>
+            <div class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Ingrese el dato" id="input">
+                <button class="btn btn-outline-success" type="submit" id="botonBuscar">Ejecutar</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="juego">
+        <div class="row" id="row1">
+            <div class="col border p-3 m-3 text-center bg-dark text-white" id="SenTerm">Ingrese la cantidad de numeros que quiere dibujar de 1 hasta 1000</div>
+
+        </div>
+        <div class="row" id="row2"></div>
+    </div>
+
+    <footer class="container-fluid bg-dark text-white d-flex justify-content-center flex-row align-content-center">
+            <div class="mx-5 my-3">Arana Studios</div>
+            <div class="mx-5 my-3">2022</div>
+            <div class="mx-5 my-3">GitHub</div>
+    </footer>
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
 </html>
