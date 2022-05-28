@@ -84,8 +84,23 @@ function diceRoller(numberOfDices, diceDamage, modificator) {
   return valors;
 }
 
-const Orgul = new Character('Orgul',"Warrior", 1, 20);
+const aragorn = new Character('Aragorn',"Ranger", 7, 60);
+const gimli = new Character('Gimli',"Warrior", 6, 70);
+const legolas = new Character('Legolas',"Explorer", 6, 50);
+const gandalf = new Character('Gandalf',"Grey Wizard", 10, 100);
+const frodo = new Character('Frodo',"Rogue", 1, 10);
 
 const dwarvenUrgrosh = new Weapon("Dwarven Urgrosh", 1, 10);
+const longBow = new Weapon("Long Bow", 1, 10);
+const sword = new Weapon("Common Sword", 1, 10);
+const kingSword = new Weapon("Sword of the King", 1, 10);
+const staff = new Weapon("Wizard Staff", 1, 10);
+const elvenDaggers = new Weapon("Elven Daggers", 1, 10);
+const dwarfAxe = new Weapon("Dwarf Axe", 1, 10);
 
-const completeArmor = new Armor('Complete Plate Armor', 10)
+const completeArmor = new Armor('Complete Armor', 6)
+const elvenSuit = new Armor('Elven Suit', 2)
+const rangerSuit = new Armor('Ranger Suit', 4)
+const geyWizardSuit= new Armor('Grey wizard suit', 4)
+const leatherArmor = new Armor('Leather Armor', 3)
+const kingScaledArmor = new Armor("King's Scaled Armor", 10)
