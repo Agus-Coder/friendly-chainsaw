@@ -1,3 +1,5 @@
+/*Declaracion de clases a usar en el resto del proyecto*/ 
+
 class Character {
   constructor(name,charClass, level, hp) {
     this.name = name;
@@ -30,7 +32,7 @@ class Character {
           " Points of damage"
       );
     } else{
-      console.log(this.name + ' no tiene ese item en su inventario')
+      console.log(this.name + ' does not have that item on its inventory')
     }
   }
 
@@ -43,9 +45,9 @@ class Character {
       this.armorWear=true
 
     }else if(this.armorWear == true){
-      console.log(this.name + ' ya esta usando una armadura! debe quitarsela anters de ponerse otra')
+      console.log(this.name + ' it is already wearing an armor!')
     } else if(this.inventory.includes(armor) == false){
-      console.log(this.name + ' No tiene esa armadura en su inventario')
+      console.log(this.name + ' does not have that item on its inventory')
     }
 
   }
@@ -74,6 +76,11 @@ class Spell {
   }
 }
 
+
+
+
+/*Declaracion de funciones a usar en el resto del proyecto*/ 
+
 function diceRoller(numberOfDices, diceDamage, modificator) {
   const valors = [];
   let rolledDice;
@@ -84,23 +91,49 @@ function diceRoller(numberOfDices, diceDamage, modificator) {
   return valors;
 }
 
+
+
+
+/*Creacion de personajes, armas y armaduras ejemplos para el avance del proyecto hasta ahora*/ 
+
 const aragorn = new Character('Aragorn',"Ranger", 7, 60);
 const gimli = new Character('Gimli',"Warrior", 6, 70);
 const legolas = new Character('Legolas',"Explorer", 6, 50);
 const gandalf = new Character('Gandalf',"Grey Wizard", 10, 100);
 const frodo = new Character('Frodo',"Rogue", 1, 10);
 
-const dwarvenUrgrosh = new Weapon("Dwarven Urgrosh", 1, 10);
-const longBow = new Weapon("Long Bow", 1, 10);
-const sword = new Weapon("Common Sword", 1, 10);
-const kingSword = new Weapon("Sword of the King", 1, 10);
+const dwarvenUrgrosh = new Weapon("Dwarven Urgrosh", 1, 8);
+const longBow = new Weapon("Long Bow", 1, 6);
+const sword = new Weapon("Common Sword", 1, 6);
+const kingSword = new Weapon("Sword of the King", 1, 12);
 const staff = new Weapon("Wizard Staff", 1, 10);
-const elvenDaggers = new Weapon("Elven Daggers", 1, 10);
-const dwarfAxe = new Weapon("Dwarf Axe", 1, 10);
+const elvenDaggers = new Weapon("Elven Daggers", 1, 4);
+const dwarfAxe = new Weapon("Dwarf Axe", 1, 6);
 
 const completeArmor = new Armor('Complete Armor', 6)
 const elvenSuit = new Armor('Elven Suit', 2)
 const rangerSuit = new Armor('Ranger Suit', 4)
-const geyWizardSuit= new Armor('Grey wizard suit', 4)
+const greyWizardSuit= new Armor('Grey wizard suit', 4)
 const leatherArmor = new Armor('Leather Armor', 3)
 const kingScaledArmor = new Armor("King's Scaled Armor", 10)
+
+
+
+
+/*Personajes, armas y armaduras en liistas*/ 
+
+let ringCommunity = [aragorn, gimli, legolas, gandalf, frodo];
+
+let weaponList = [dwarvenUrgrosh, longBow, sword, kingSword, staff, elvenDaggers, dwarfAxe]
+
+let armorList = [completeArmor, elvenSuit, rangerSuit, greyWizardSuit, leatherArmor, kingScaledArmor]
+
+const nombreDeArmas = weaponList.map(el => el.name)
+const nombreDePersonajes = ringCommunity.map(el => el.name)
+const nombreDeArmaduras = armorList.map(el => el.name)
+console.log(armas)
+console.log(personajes)
+console.log(armaduras)
+
+
+let desicion = prompt(``)
