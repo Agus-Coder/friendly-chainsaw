@@ -34,7 +34,7 @@ class Character {
   wearArmor(armor) {
     if (this.inventory.includes(armor) && this.armorWear == false) {
       this.totalAC = this.baseAc + armor.armorACContribution;
-      console.log(
+      alert(
         this.name +
           " now wears a " +
           armor.name +
@@ -86,6 +86,8 @@ function diceRoller(numberOfDices, diceDamage, modificator) {
   return valors;
 }
 
+
+
 /*Creacion de personajes, armas y armaduras ejemplos para el avance del proyecto hasta ahora*/
 
 const aragorn = new Character("Aragorn", "Ranger", 7, 60);
@@ -109,7 +111,9 @@ const greyWizardSuit = new Armor("Grey wizard suit", 4);
 const leatherArmor = new Armor("Leather Armor", 3);
 const kingScaledArmor = new Armor("King's Scaled Armor", 10);
 
-/*Personajes, armas y armaduras en liistas*/
+
+
+/*Personajes, armas y armaduras en listas con objetos*/
 
 let ringCommunity = [
   aragorn,
@@ -138,9 +142,13 @@ let armorList = [
   kingScaledArmor,
 ];
 
+
+
+/* listas de nombres */
+
 const nombreDeArmas = weaponList.map(
   (el, ind) => `\n ${ind}: ${el.name}`
-  );
+);
 
 const nombreDePersonajes = ringCommunity.map(
   (el, ind) => `\n ${ind}: ${el.name}`
@@ -148,7 +156,11 @@ const nombreDePersonajes = ringCommunity.map(
 
 const nombreDeArmaduras = armorList.map(
   (el, ind) => `\n ${ind}: ${el.name}`
-  );
+);
+
+
+
+/* ejecucion en el browser con el avance actual del proyecto */
 
 let desicionPersonaje = prompt(
   `Seleccione un personaje (ingrese el numero correspondiente): ${nombreDePersonajes}`
@@ -159,6 +171,13 @@ alert(`${ringCommunity[desicionPersonaje].name} no posee armas ni armadura`);
 let desicionArma = prompt(
   `Seleccione un arma de la siguiente lista para que ${ringCommunity[desicionPersonaje].name} la equipe: ${nombreDeArmas}`
 );
+
+
+
+ringCommunity[desicionPersonaje].inventory.push(weaponList[desicionArma])
+
+console.log(ringCommunity[desicionPersonaje].inventory)
+
 
 alert(
   `${ringCommunity[desicionPersonaje].name} ahora esta equipado con ${
@@ -174,15 +193,43 @@ let desicionArmadura = prompt(
   `Seleccione un armadura de la siguiente lista para que ${ringCommunity[desicionPersonaje].name} la equipe: ${nombreDeArmaduras}`
 );
 
+ringCommunity[desicionPersonaje].inventory.push(armorList[desicionArmadura])
+
+console.log(ringCommunity[desicionPersonaje].inventory)
+
 alert(
-  `${ringCommunity[desicionPersonaje].name} ahora esta equipado con ${
+  `${ringCommunity[desicionPersonaje].name} ahora posee en su inventario ${
     armorList[desicionArmadura].name
-  }, la cual le da un armor class de ${
+  }, la cual le dara un armor class de ${
     armorList[desicionArmadura].armorACContribution
   }, teniendo un total de ${
     armorList[desicionArmadura].armorACContribution + 10
-  }`
+  } cuando la tenga equipada`
 );
 
-// console.log(weaponList.map(el => el.name))
-// console.log(nombreDeArmaduras)
+let accion = 0;
+
+while(accion !=4){
+  accion = prompt('Su personaje esta listo, que desea hacer?: \n1:probar ataque\n2:equipar armadura\n3:comprobar armorclass\n4:salir')
+
+  if(accion == 1){
+      alert(`${ringCommunity[desicionPersonaje].name
+      } ataca con ${
+        weaponList[desicionArma].name
+      } y hace ${
+        diceRoller(weaponList[desicionArma].weaponDicesQuantity,weaponList[desicionArma].weaponDiceDamage,0)
+      } puntos de dano`);
+    } else if (accion == 2){
+      ringCommunity[desicionPersonaje].wearArmor(armorList[desicionArmadura]);
+    } else if (accion == 3){
+      if(ringCommunity[desicionPersonaje].armorWear == false){
+
+        alert(`${ringCommunity[desicionPersonaje].name} no posee su armadura equipada`)
+
+      } else if (ringCommunity[desicionPersonaje].armorWear == true){
+      alert(`${ringCommunity[desicionPersonaje].name} tiene un armor class de ${ringCommunity[desicionPersonaje].totalAC}`)
+      }
+    }else if (accion == 4){
+      accion = 4
+    }
+  }
