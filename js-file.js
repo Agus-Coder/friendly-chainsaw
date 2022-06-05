@@ -1,5 +1,16 @@
 /*Declaracion de clases a usar en el resto del proyecto*/
 
+let imagen = document.getElementById('imagen test')
+
+let cambiarImagen = document.getElementById('seleccionar')
+cambiarImagen.addEventListener('click',selectClass)
+
+function selectClass(){
+  let typeOfClass = document.getElementById('typeOfClass')
+  imagen.innerHTML = `<img src="./Clases D&D/${typeOfClass.value}.png" alt="" srcset="">`
+}
+
+
 class Character {
   constructor(name, charClass, level, hp) {
     this.name = name;
@@ -233,3 +244,5 @@ while(accion !=4){
       accion = 4
     }
   }
+
+

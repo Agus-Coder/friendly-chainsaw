@@ -58,3 +58,17 @@ div{
 .magia2 {
     grid-area: magia2;
 }
+
+.atributos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1vh;
+}
+
+.contenedorAtributo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 2.5vh;
+}
