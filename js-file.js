@@ -1,15 +1,8 @@
-/*Declaracion de clases a usar en el resto del proyecto*/
 
-let imagen = document.getElementById('imagen test')
 
-let cambiarImagen = document.getElementById('seleccionar')
-cambiarImagen.addEventListener('click',selectClass)
 
-function selectClass(){
-  let typeOfClass = document.getElementById('typeOfClass')
-  imagen.innerHTML = `<img src="./Clases D&D/${typeOfClass.value}.png" alt="" srcset="">`
-}
 
+/*-------------Declaracion de clases a usar en el resto del proyecto-------------*/
 
 class Character {
   constructor(name, charClass, level, hp) {
@@ -85,7 +78,7 @@ class Spell {
   }
 }
 
-/*Declaracion de funciones a usar en el resto del proyecto*/
+/*-------------Declaracion de funciones a usar en el resto del proyecto-------------*/
 
 function diceRoller(numberOfDices, diceDamage, modificator) {
   const valors = [];
@@ -99,7 +92,7 @@ function diceRoller(numberOfDices, diceDamage, modificator) {
 
 
 
-/*Creacion de personajes, armas y armaduras ejemplos para el avance del proyecto hasta ahora*/
+/*-------------Creacion de personajes, armas y armaduras ejemplos para el avance del proyecto hasta ahora-------------*/
 
 const aragorn = new Character("Aragorn", "Ranger", 7, 60);
 const gimli = new Character("Gimli", "Warrior", 6, 70);
@@ -124,7 +117,7 @@ const kingScaledArmor = new Armor("King's Scaled Armor", 10);
 
 
 
-/*Personajes, armas y armaduras en listas con objetos*/
+/*-------------Personajes, armas y armaduras en listas con objetos-------------*/
 
 let ringCommunity = [
   aragorn,
@@ -155,7 +148,7 @@ let armorList = [
 
 
 
-/* listas de nombres */
+/*-------------listas de nombres-------------*/
 
 const nombreDeArmas = weaponList.map(
   (el, ind) => `\n ${ind}: ${el.name}`
@@ -171,7 +164,7 @@ const nombreDeArmaduras = armorList.map(
 
 
 
-/* ejecucion en el browser con el avance actual del proyecto */
+/*-------------Ejecucion en el browser con el avance actual del proyecto-------------*/
 
 let desicionPersonaje = prompt(
   `Seleccione un personaje (ingrese el numero correspondiente): ${nombreDePersonajes}`
@@ -245,4 +238,60 @@ while(accion !=4){
     }
   }
 
+  
+  
+  /*-------------Modificadores de DOM-------------*/
+let armasDisponibles = document.getElementById('armasDisponibles')
+let armadurasDisponibles = document.getElementById('armadurasDisponibles')
 
+weaponList.forEach(el => (armasDisponibles.innerHTML = `<option value="${el.name}">${el.name}</option>`))
+armorList.forEach(el => (armadurasDisponibles.innerHTML = `<option value="${el.name}">${el.name}</option>`))
+
+
+  /*-------------Variables para usar en DOM y Eventos-------------*/
+
+let typeOfClass = document.getElementById('typeOfClass')
+
+let armamentoPantalla = document.getElementById('armamentoPantalla')
+let armaduraPantalla = document.getElementById('armaduraPantalla')
+let mensajePantalla = document.getElementById('mensajePantalla')
+let mensajesMostrados = document.getElementById('mensajesMostrados')
+
+
+
+
+let botonUsarArma = document.getElementById('botonUsarArma')
+botonUsarArma.addEventListener('click',ataqueEnPantalla)
+
+
+
+function ataqueEnPantalla(){
+
+  mensajesMostrados.innerText = 
+
+  `${ringCommunity[desicionPersonaje].name
+  } ataca con ${
+    weaponList[desicionArma].name
+  } y hace ${
+    diceRoller(weaponList[desicionArma].weaponDicesQuantity,weaponList[desicionArma].weaponDiceDamage,0)
+  } puntos de dano`
+}
+
+
+
+
+
+
+let imagen = document.getElementById('imagen test')
+
+
+
+
+
+function selectClass(){
+  let typeOfClass2 = document.getElementById('typeOfClass')
+  imagen.innerHTML = `<img src="./Clases D&D/${typeOfClass2.value}.png" alt="" srcset="">`
+}
+
+let cambiarImagen = document.getElementById('seleccionar')
+cambiarImagen.addEventListener('click',selectClass)

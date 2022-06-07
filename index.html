@@ -90,7 +90,7 @@
 
             <p>Select your Class!</p>
             <select name="typeOfClass" id="typeOfClass">
-                <option value="Barbarian">Barbarian</option>
+                <option value="barbarian">Barbarian</option>
                 <option value="Bard">Bard</option>
                 <option value="Cleric">Cleric</option>
                 <option value="Druid">Druid</option>
@@ -109,15 +109,31 @@
             </button>
         </div>
 
-        <div class="stats3 border border-dark p-3 m-3 text-center">test 3</div>
-
-        <div class="imagen1 border border-dark p-3 m-3 text-center bg-dark text-white" id="imagen test">
-            <!-- <img src="./Clases D&D/wizard.png" alt="" srcset=""> -->
+        <div class="stats3 border border-dark p-3 m-3 text-center" id="mensajePantalla">
+            <h3>Mensajes</h3>
+            <p id="mensajesMostrados"></p>
         </div>
 
-        <div class="magia1 border border-dark p-3 m-3 text-center"> test 3</div>
+        <div class="imagen1 border border-dark p-3 m-3 text-center bg-dark text-white" id="imagen test">
+        </div>
 
-        <div class="magia2 border border-dark p-3 m-3 text-center"> test 4</div>
+        <div class="magia1 border border-dark p-3 m-3 text-center" id="armamentoPantalla">
+            <h3>Armamento</h3>
+            <select name="armasDisponibles" id="armasDisponibles">
+            </select>
+            <button id="botonUsarArma">Seleccionar</button>
+        </div>
+
+        <div class="magia2 border border-dark p-3 m-3 text-center" id="armaduraPantalla">
+            <h3>Armadura</h3>
+            <select name="armadurasDisponibles" id="armadurasDisponibles">
+                <option value="Barbarian">Barbarian</option>
+                <option value="Bard">Bard</option>
+                <option value="Cleric">Cleric</option>
+                <option value="Druid">Druid</option>
+            </select>
+            <button>Seleccionar</button>
+        </div>
 
     </div>
 
