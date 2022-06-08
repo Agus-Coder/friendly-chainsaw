@@ -177,7 +177,6 @@ let desicionArma = prompt(
 );
 
 
-
 ringCommunity[desicionPersonaje].inventory.push(weaponList[desicionArma])
 
 console.log(ringCommunity[desicionPersonaje].inventory)
@@ -236,11 +235,12 @@ while(accion !=4){
     }else if (accion == 4){
       accion = 4
     }
-  }
+}
 
-  
-  
-  /*-------------Modificadores de DOM-------------*/
+
+
+
+/*-------------Modificadores de DOM-------------*/
 let armasDisponibles = document.getElementById('armasDisponibles')
 let armadurasDisponibles = document.getElementById('armadurasDisponibles')
 
