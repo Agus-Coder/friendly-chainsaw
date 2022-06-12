@@ -1,4 +1,4 @@
-import * as Classes from './classes'
+import * as Classes from './classes.js'
 
 
 const aragorn = new Classes.Character("Aragorn", "Ranger", 7, 60);

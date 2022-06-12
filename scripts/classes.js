@@ -1,4 +1,4 @@
-import { diceRoller } from "./dices";
+import { diceRoller } from "./dices.js";
 
 
 class Character {

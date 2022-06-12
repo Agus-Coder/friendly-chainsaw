@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/scripts/statCounter.js" defer></script>
+    <script src="/scripts/main.js" defer type="module"></script>
     <link rel="stylesheet" href="styles/style.css">
 
     <title>Arana Agustin, simulador D&D</title>
@@ -20,10 +20,6 @@
     <nav class="navbar navbar-dark bg-dark text-white">
         <div class="container-fluid">
             <h1>D&D Character Sheet Creator</h1>
-            <div class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Ingrese el dato" id="input">
-                <button class="btn btn-outline-success" type="submit" id="botonBuscar">Execute</button>
-            </div>
         </div>
     </nav>
 
@@ -102,6 +98,10 @@
         </div>
 
         <div class="stats2 border border-dark p-3 m-3 text-center">
+
+            <p>Set your character's name</p>
+            <input type="text">
+            <button>Set</button>
 
             <p>Select your Class!</p>
             <select name="typeOfClass" id="typeOfClass">
