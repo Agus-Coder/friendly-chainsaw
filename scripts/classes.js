@@ -2,9 +2,10 @@ import { diceRoller } from "./dices.js";
 
 
 class Character {
-    constructor(name, charClass, level, hp) {
+    constructor(name, charClass, race, level, hp) {
       this.name = name;
       this.charClass = charClass;
+      this.race = race;
       this.level = level;
       this.hp = hp;
       this.baseAc = 10;

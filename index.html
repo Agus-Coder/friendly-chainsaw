@@ -33,6 +33,8 @@
 
     <div class="container border border-dark">
 
+        <!------------Atributos------------>
+
         <div class="stats-1 border border-dark p-3 m-3 text-center">
 
             <div class="atributos">
@@ -97,6 +99,8 @@
 
         </div>
 
+        <!------------Nombre, Clase, Raza------------>
+
         <div class="stats2 border border-dark p-3 m-3 text-center">
 
             <p>Set your character's name</p>
@@ -122,7 +126,24 @@
             <button id="botonSeleccionarClase">
                 Select!
             </button>
+
+            <p>Select your Race!</p>
+            <select name="typeOfRace" id="typeOfRace">
+                <option value="human">Human</option>
+                <option value="elf">Elf</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="gnome">Gnome</option>
+                <option value="draconic">Draconic</option>
+                <option value="semiorc">Semi-Orc</option>
+                <option value="semielf">Semi-Elf</option>
+                <option value="halfling">Halfling</option>
+            </select>
+            <button id="botonSeleccionarRaza">
+                Select!
+            </button>
         </div>
+
+        <!------------Barra de Mensajes------------>
 
         <div class="stats3 border border-dark p-3 m-3 text-center">
             <h3>Mensajes</h3>
@@ -132,18 +153,24 @@
         <div class="imagen1 border border-dark p-3 m-3 text-center bg-dark text-white" id="imagen test">
         </div>
 
+        <!------------Armamento------------>
+
         <div class="magia1 border border-dark p-3 m-3 text-center" id="armamentoPantalla">
             <h3>Armamento</h3>
             <select name="armasDisponibles" id="armasDisponibles">
             </select>
             <button id="botonUsarArma">Seleccionar</button>
+            <p id="infoArma"></p>
         </div>
+
+        <!------------Armadura------------>
 
         <div class="magia2 border border-dark p-3 m-3 text-center" id="armaduraPantalla">
             <h3>Armadura</h3>
             <select name="armadurasDisponibles" id="armadurasDisponibles">
             </select>
-            <button>Seleccionar</button>
+            <button id="seleccionarArmadura">Seleccionar</button>
+            <p id="infoArmadura"></p>
         </div>
 
     </div>
