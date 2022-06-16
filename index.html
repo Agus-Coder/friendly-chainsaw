@@ -104,7 +104,7 @@
         <div class="stats2 border border-dark p-3 m-3 text-center">
 
             <p>Set your character's name</p>
-            <input type="text">
+            <input type="text" id="characterName">
             <button>Set</button>
 
             <p>Select your Class!</p>
@@ -146,11 +146,22 @@
         <!------------Barra de Mensajes------------>
 
         <div class="stats3 border border-dark p-3 m-3 text-center">
-            <h3>Mensajes</h3>
-            <p id="mensajesMostrados"></p>
+            <div>
+                <h3>Mensajes</h3>
+                <p id="mensajesMostrados">Aun no ha generado un personaje</p>
+            </div>
+            
+            <div>
+                <h3>Generar personaje</h3>
+                <button id="generar">Generar!</button>
+            </div>
+
+            
         </div>
 
-        <div class="imagen1 border border-dark p-3 m-3 text-center bg-dark text-white" id="imagen test">
+        <!------------Imagen Personaje------------>
+
+        <div class="imagen1 border border-dark p-3 m-3 text-center bg-dark text-white" id="imagen">
         </div>
 
         <!------------Armamento------------>

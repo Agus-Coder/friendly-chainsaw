@@ -7,6 +7,17 @@ let infoArmadura = document.getElementById("infoArmadura");
 let seleccionarArmadura = document.getElementById("seleccionarArmadura");
 let seleccionarArma = document.getElementById("botonUsarArma");
 
+let botonSeleccionarClase = document.getElementById("botonSeleccionarClase");
+let typeOfClass = document.getElementById("typeOfClass");
+
+function selectClass() {
+  botonSeleccionarClase.addEventListener("click", () => {
+    imagen.innerHTML = `<img src="./assets/Clases D&D/${typeOfClass.value}.png" alt="" srcset="">`;
+  });
+}
+
+selectClass();
+
 function agregarAlDom() {
   weaponList.forEach(
     (el) =>
@@ -40,4 +51,4 @@ function agregarArmaduraAlDOM() {
 
 agregarArmaduraAlDOM();
 
-export { agregarAlDom, agregarArmaAlDOM, agregarArmaduraAlDOM };
+export { agregarAlDom, agregarArmaAlDOM, agregarArmaduraAlDOM, selectClass };
