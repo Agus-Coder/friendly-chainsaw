@@ -51,4 +51,22 @@ function agregarArmaduraAlDOM() {
 
 agregarArmaduraAlDOM();
 
-export { agregarAlDom, agregarArmaAlDOM, agregarArmaduraAlDOM, selectClass };
+/* Test de Operadores avanzados */
+let arrNombresYClases = [];
+function desestructurarObjetosPrueba() {
+  weaponList.forEach((el) => {
+    let { name, charClass } = el;
+    arrNombresYClases.push([name, charClass]);
+  });
+  console.log(...arrNombresYClases);
+}
+
+desestructurarObjetosPrueba();
+
+export {
+  agregarAlDom,
+  agregarArmaAlDOM,
+  agregarArmaduraAlDOM,
+  selectClass,
+  desestructurarObjetosPrueba,
+};
