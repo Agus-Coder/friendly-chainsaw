@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="/scripts/main.js" defer type="module"></script>
-    <!-- <script src="/scripts/three.js"></script> -->
+    
     <link rel="stylesheet" href="styles/style.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -30,7 +30,7 @@
 
     <div class="row justify-content-center">
         <div class="col-8 border p-3 m-3 text-center align-self-center bg-dark text-white">
-            Hoja de Personaje
+            Generador de Hojas de Personaje
         </div>
     </div>
 
@@ -107,8 +107,8 @@
         <div class="stats2 border border-dark p-3 m-3 text-center">
 
             <p>Set your character's name</p>
-            <input type="text" id="characterName">
-            <button>Set</button>
+            <input type="text" id="characterName" value="Nameless">
+            <button id="botonSeleccionarNombre">Set</button>
 
             <p>Select your Class!</p>
             <select name="typeOfClass" id="typeOfClass">
@@ -153,13 +153,17 @@
                 <h3>Mensajes</h3>
                 <p id="mensajesMostrados">Aun no ha generado un personaje</p>
             </div>
-            
+
             <div>
                 <h3>Generar personaje</h3>
                 <button id="generar">Generar!</button>
             </div>
 
-            
+            <div id="mostrarResumen">
+
+            </div>
+
+
         </div>
 
         <!------------Imagen Personaje------------>
@@ -189,14 +193,17 @@
 
     </div>
 
+    <!------------Dados + Dotes------------>
+
     <div class="container border border-dark dadosDotes align-items-center">
         <div id="dados">
             <h3>Lanzador de dados</h3>
             <canvas id="c"></canvas>
         </div>
-        
+
         <div id="contenedorDotes">
             <h3>Dotes</h3>
+            <p>Seleccionar 1</p>
             <select name="dotes" id="dotes">
             </select>
             <button id="botonDotes">Seleccionar</button>
@@ -204,7 +211,11 @@
         </div>
     </div>
 
+    <!------------ Resumen personaje creado ------------>
 
+    <div id="hojaPersonaje">
+
+    </div>
 
     <!-- Footer -->
 

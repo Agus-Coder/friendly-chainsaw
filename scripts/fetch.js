@@ -1,9 +1,7 @@
 function dataDesdeFetch() {
   let dotes = document.getElementById("dotes");
   let doteElegida = document.getElementById("doteElegida");
-
   let botonDotes = document.getElementById("botonDotes");
-
   botonDotes.addEventListener("click", agregarDote);
 
   fetch("https://www.dnd5eapi.co/api/proficiencies", {

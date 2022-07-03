@@ -41,13 +41,13 @@ class Character {
   wearArmor(armor) {
     if (this.inventory.includes(armor) && this.armorWear == false) {
       this.totalAC = this.baseAc + armor.armorACContribution;
-      alert(
-        this.name +
-          " now wears a " +
-          armor.name +
-          " and now its armor class it is equal to " +
-          this.totalAC
-      );
+      // alert(
+      //   this.name +
+      //     " now wears a " +
+      //     armor.name +
+      //     " and now its armor class it is equal to " +
+      //     this.totalAC
+      // );
 
       this.armorWear = true;
     } else if (this.armorWear == true) {

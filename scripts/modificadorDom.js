@@ -1,4 +1,4 @@
-import { ringCommunity, weaponList, armorList } from "./instances.js";
+import { weaponList, armorList } from "./instances.js";
 
 let armasDisponibles = document.getElementById("armasDisponibles");
 let armadurasDisponibles = document.getElementById("armadurasDisponibles");
@@ -6,18 +6,49 @@ let infoArma = document.getElementById("infoArma");
 let infoArmadura = document.getElementById("infoArmadura");
 let seleccionarArmadura = document.getElementById("seleccionarArmadura");
 let seleccionarArma = document.getElementById("botonUsarArma");
+let botonSeleccionarNombre = document.getElementById("botonSeleccionarNombre");
 
-let botonSeleccionarClase = document.getElementById("botonSeleccionarClase");
+// Nombre de personaje
+let characterName = document.getElementById("characterName");
+function setName() {
+  botonSeleccionarNombre.addEventListener("click", () => {
+    if(characterName.value == 'Nameless'){
+      alert('Ingrese un nombre!')
+    }else {
+      characterName = characterName.value;
+    console.log(characterName)
+    }
+  });
+}
+
+setName();
+
+// Clase
 let typeOfClass = document.getElementById("typeOfClass");
+let botonSeleccionarClase = document.getElementById("botonSeleccionarClase");
 
 function selectClass() {
   botonSeleccionarClase.addEventListener("click", () => {
     imagen.innerHTML = `<img src="./assets/Clases D&D/${typeOfClass.value}.png" alt="" srcset="">`;
+    typeOfClass = typeOfClass.value;
   });
 }
 
 selectClass();
 
+// Raza
+let typeOfRace = document.getElementById("typeOfRace");
+let botonSeleccionarRaza = document.getElementById("botonSeleccionarRaza");
+
+function selectRace() {
+  botonSeleccionarRaza.addEventListener("click", () => {
+    typeOfRace = typeOfRace.value;
+  });
+}
+
+selectRace();
+
+// Agregar armas
 function agregarAlDom() {
   weaponList.forEach(
     (el) =>
@@ -58,7 +89,6 @@ function desestructurarObjetosPrueba() {
     let { name, charClass } = el;
     arrNombresYClases.push([name, charClass]);
   });
-  console.log(...arrNombresYClases);
 }
 
 desestructurarObjetosPrueba();
@@ -69,4 +99,8 @@ export {
   agregarArmaduraAlDOM,
   selectClass,
   desestructurarObjetosPrueba,
+  setName,
+  characterName,
+  typeOfClass,
+  typeOfRace,
 };

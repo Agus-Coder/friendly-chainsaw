@@ -2,6 +2,18 @@
     height: 20vh;
 }
 
+button {
+    display: inline-flex;
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+}
+
+button:active {
+    background-color: rgb(27, 26, 26);
+    color: white;
+    border: white 2px solid;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -41,30 +53,92 @@
     grid-area: magia2;
 }
 
-.atributos{
+.atributos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1vh;
 }
 
-.contenedorAtributo{
+.contenedorAtributo {
     display: flex;
     align-content: center;
     justify-content: center;
     height: 2.5vh;
 }
 
-.dadosDotes {  display: grid;
+.dadosDotes {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "dados contenedorDotes";
-  }
-  
-  .dados { grid-area: dados; }
-  
-  .contenedorDotes { grid-area: contenedorDotes; }
-  
+        "dados contenedorDotes";
+}
+
+.dados {
+    grid-area: dados;
+}
+
+.contenedorDotes {
+    grid-area: contenedorDotes;
+}
+
+
+#hojaPersonaje {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "titulo titulo titulo titulo titulo titulo titulo titulo"
+        "stats stats modificadores claseNivel claseNivel claseNivel nivelHp nivelHp"
+        "stats stats modificadores inventario inventario inventario inventario inventario"
+        "stats stats modificadores dotesSeleccionadas dotesSeleccionadas dotesSeleccionadas dotesSeleccionadas dotesSeleccionadas";
+}
+
+.titulo {
+    grid-area: titulo;
+    padding: 10px;
+    height: auto;
+}
+
+.stats {
+    grid-area: stats;
+    padding: 10px;
+    height: auto;
+
+}
+
+.modificadores {
+    grid-area: modificadores;
+    padding: 10px;
+    height: auto;
+
+}
+
+.claseNivel {
+    padding: 10px;
+    grid-area: claseNivel;
+    height: auto;
+}
+
+.nivelHp {
+    padding: 10px;
+    grid-area: nivelHp;
+    height: auto;
+}
+
+.inventario {
+    padding: 10px;
+    grid-area: inventario;
+    height: auto;
+}
+
+.dotesSeleccionadas {
+    padding: 10px;
+    grid-area: dotesSeleccionadas;
+    height: auto;
+}
