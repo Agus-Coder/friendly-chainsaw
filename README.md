@@ -2,6 +2,8 @@
 
 ### Presentacion aplicacion
 
+Single Page Application para la creacion de hojas de personaje de Dungeons and Dragons
+
 ### Inicializar Proyecto
 Para iniciar el proyecto, clonar desde el repositorio: 
 
@@ -15,7 +17,7 @@ Una vez en la carpeta clonada, instalar dependencias:
 
     npm install
     
-una vez instaladas las dependencias, inicializar el archivo index.html
+Al finalizar la instalacion de las dependencias, inicializar el archivo index.html
 
 ### Librerias utilizadas
 
@@ -23,3 +25,7 @@ una vez instaladas las dependencias, inicializar el archivo index.html
 | ---------------------------------------------------------------- | ------------------------- |
 | [Bootstrap](https://getbootstrap.com/)                           | CSS Framework             |
 | [Three.js](https://threejs.org/)                                 | 3D FrameWork              |
+
+
+---
+Este proyecto fue desarrollado para el curso de Javascript en la plataforma de CoderHouse [![coderhouse](https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
