@@ -1,5 +1,14 @@
 import * as THREE from "../node_modules/three/build/three.module.js";
 
+/*
+El uso de three.js no es para nada sencillo. La creacion del icosahedro (1d20) se realiza siguiendo la documentacion
+de three.js disponible en su sitio.
+La idea es incorporar numeros en las caras del d20 y poder agregar una funcionalidad de arrojar el dado.
+
+En esta etapa de desarrollo, la complejidad de este codigo es demasiado elevada
+*/
+
+
 //renderer
 
 function main() {

@@ -1,5 +1,13 @@
 import { diceRoller } from "./dices.js";
 
+/*
+Este documento almacena las 4 clases utilizadas para el proyecto. la clase mas desarrollada es 'Character',
+la cual es la empleada para la creacion de los personajes propieamente dichos. Dicha clase toma los parametros:
+nombre, clase, raza, nivel, hit points, fuerza, destreza, constitucion, inteligencia, carisma y sabiduria
+Los metodos presentes dentro de la clase Character no poseen un uso especifico para el proyecto, pero no los
+elimino todavia hasta estar seguro de que no poseen alguna funcionalidad en futuras versiones del proyecto
+*/
+
 class Character {
   constructor(name, charClass, race, level, hp, str, dex, con, int, cha, wis) {
     this.name = name;
@@ -57,6 +65,13 @@ class Character {
     }
   }
 }
+
+/*
+Las clases Weapon, Armor, y Spell generan objetos a ser utilizados como armas, armaduras y hechizos, respectivamente.
+Estas clases se utilizan para generar objetos ejemplos en la generacion de hoja de personaje. En la presente version del
+proyecto todavia no se encuentra desarrollada el agregado de spell a los personajes.
+Ideas a futuro: Agregar pestanas de 'herreria' y 'biblioteca' para que el usuario pueda construir sus propios items y conjuros.
+*/
 
 class Weapon {
   constructor(name, weaponDicesQuantity, weaponDiceDamage) {

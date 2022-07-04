@@ -8,5 +8,8 @@ function diceRoller(numberOfDices, diceDamage, modificator) {
     return valors;
 }
 
-
 export {diceRoller};
+
+/*
+Se crea y exporta la funcion que permite arrojar X cantidad de dados, con Y caras y un modificador +Z
+*/

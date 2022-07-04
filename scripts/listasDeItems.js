@@ -8,22 +8,23 @@ let seleccionarArmadura = document.getElementById("seleccionarArmadura");
 let seleccionarArma = document.getElementById("botonUsarArma");
 let botonSeleccionarNombre = document.getElementById("botonSeleccionarNombre");
 
-// Nombre de personaje
+
+// seteo Nombre de personaje
 let characterName = document.getElementById("characterName");
 function setName() {
   botonSeleccionarNombre.addEventListener("click", () => {
-    if(characterName.value == 'Nameless'){
-      alert('Ingrese un nombre!')
-    }else {
+    if (characterName.value == "Nameless") {
+      alert("Ingrese un nombre!");
+    } else {
       characterName = characterName.value;
-    console.log(characterName)
+      console.log(characterName);
     }
   });
 }
-
 setName();
 
-// Clase
+
+// Seteo de Clase
 let typeOfClass = document.getElementById("typeOfClass");
 let botonSeleccionarClase = document.getElementById("botonSeleccionarClase");
 
@@ -36,7 +37,8 @@ function selectClass() {
 
 selectClass();
 
-// Raza
+
+// Seteo de Raza
 let typeOfRace = document.getElementById("typeOfRace");
 let botonSeleccionarRaza = document.getElementById("botonSeleccionarRaza");
 
@@ -48,7 +50,8 @@ function selectRace() {
 
 selectRace();
 
-// Agregar armas
+
+// Agregar armas y armaduras pre generadas a lista en DOM
 function agregarAlDom() {
   weaponList.forEach(
     (el) =>
@@ -62,6 +65,8 @@ function agregarAlDom() {
 
 agregarAlDom();
 
+
+//Seteo de arma para Personaje
 function agregarArmaAlDOM() {
   seleccionarArma.addEventListener("click", () => {
     let eleccion = armasDisponibles.value;
@@ -69,9 +74,9 @@ function agregarArmaAlDOM() {
     infoArma.innerText = `Nombre: ${armaObjeto.name}\nDano: ${armaObjeto.weaponDicesQuantity}d${armaObjeto.weaponDiceDamage}`;
   });
 }
-
 agregarArmaAlDOM();
 
+//Seteo de armadura para Personaje
 function agregarArmaduraAlDOM() {
   seleccionarArmadura.addEventListener("click", () => {
     let eleccion = armadurasDisponibles.value;
@@ -79,8 +84,8 @@ function agregarArmaduraAlDOM() {
     infoArmadura.innerText = `Nombre: ${armaduraObjeto.name}\nContribucion a la CA: ${armaduraObjeto.armorACContribution}`;
   });
 }
-
 agregarArmaduraAlDOM();
+
 
 /* Test de Operadores avanzados */
 let arrNombresYClases = [];
